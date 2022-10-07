@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Quiz Challenge</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- div for the countdown timer -->
+    <div id="countdown"></div>
+
+    <!-- starting page with the start quiz button -->
+    <div id="page0" class="show">
+      <h1>Coding Quiz Challenge</h1>
+      <p>Answer the following questions about coding within the time limit.</p>
+      <p>
+        Keep in mind that incorrect answers will penalize your score and your
+        time by 10 seconds!
+      </p>
+      <button id="btn" type="button">Start Quiz</button>
+    </div>
+    <!-- start of the multiple choice question pages -->
+    <div id="page1" class="hide">
+      <h2>Commonly used data types Do Not Include:</h2>
+      <div class="btnGroup">
+        <button class="btnWrong" type="button">1. strings</button>
+        <button class="btnWrong" type="button">2. booleans</button>
+        <button class="btnRight" type="button">3. alerts</button>
+        <button class="btnWrong" type="button">4. numbers</button>
+      </div>
+    </div>
+    <div id="page2" class="hide">
+      <h2>
+        The condition in an if / else statement is enclosed with _______.
+      </h2>
+      <div class="btnGroup">
+        <button class="btnWrong" type="button">
+          1. quotes
+        </button>
+        <button class="btnWrong" type="button">
+          2. curly brackets
+        </button>
+        <button class="btnWrong" type="button">
+          3. square brackets
+        </button>
+        <button class="btnRight" type="button">
+          4. parenthesis
+        </button>
+      </div>
+    </div>
+    <div id="page3" class="hide">
+      <h2>Arrays in JavaScript can be used to store _______.</h2>
+      <div class="btnGroup">
+        <button class="btnWrong" type="button">1. numbers and strings</button>
+        <button class="btnWrong" type="button">2. other arrays</button>
+        <button class="btnWrong" type="button">3. booleans</button>
+        <button class="btnRight" type="button">4. all of the above</button>
+      </div>
+    </div>
+    <div id="page4" class="hide">
+      <h2>
+        String values must be enclosed within _______ when being assigned to variables.
+      </h2>
+      <div class="btnGroup">
+        <button class="btnRight" type="button">1. quotes</button>
+        <button class="btnWrong" type="button">2. commas</button>
+        <button class="btnWrong" type="button">3. curly brackets</button>
+        <button class="btnWrong" type="button">4. parenthesis</button>
+      </div>
+    </div>
+    <!-- end page for quiz to show the score and to be able to submit the score and initials -->
+    <div id="pageEnd" class="hide">
+      <h1 id="allDone" class="hide">All Done!</h1>
+      <h1 id="gameOver" class="hide">Time's Up!</h1>
+      <h3 id="score">Feel free to try again.</h3>
+      <form action="score">
+        <label for="initials">Enter Initials: </label>
+        <input type="text" id="saveInitials" name="initials" />
+        <input id="submit" type="submit" />
+      </form>
+    </div>
+    <!-- page to see last high score with initials, go back button and clear score button -->
+    <div id="pageHighScores" class="hide">
+      <h1>High Score</h1>
+      <p><strong>Score:</strong> <span id="highScoreSpan"></span></p>
+      <button id="goBack">Go Back</button>
+      <button id="clearScores">Clear High Score</button>
+    </div>
+
+    <!-- divs for correct and wrong tags that pop up when a multiple choice answer is clicked -->
+    <div class="hide" id="correct">
+      <p>Astounding! :)</p>
+    </div>
+    <div class="hide" id="wrong">
+      <p>You have disgraced your ancestors >:(</p>
+    </div>
+
+    <script src="./assets/javascript/script.js"></script>
+  </body>
+</html>
